@@ -1,6 +1,4 @@
-# Input: ../final_dashboard/thesis_dashboard_Final.html (embedded decomposition data) | Output: stl_full_series_decomposition/ (per-target CSVs + stl_summary.csv, written next to this script)
 
-from pathlib import Path
 import json
 import numpy as np
 import pandas as pd
