@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+*.csv
+*.xlsx
+*.png
+*.html
+!final_dashboard/*.html

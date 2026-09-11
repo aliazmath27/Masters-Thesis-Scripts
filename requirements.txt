@@ -1,0 +1,21 @@
+# Core data handling
+pandas
+numpy
+openpyxl        # needed by pandas to read/write .xlsx
+
+# Clustering / stats
+scikit-learn
+scipy
+statsmodels
+
+# Plotting (clustering + inventory/DFT scripts)
+matplotlib
+adjustText
+
+# Deep-learning forecasting (dl_forecasting_tuned*.py, dl_lookback_refinement.py, verify_exact_canonical_dl_check.py)
+tensorflow
+
+# Agent-reasoning forecasting (forecasting/agent_reasoning/*.py)
+python-dotenv
+langchain-core
+langchain-google-genai
