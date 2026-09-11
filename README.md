@@ -63,7 +63,7 @@ Chained in this order on the raw OData export (`ItemLedgerEntriesCustom_all_rows
 | `thc_group_decomposition.py` | STL seasonal/trend decomposition, per THC group |
 | `stl_full_series_decomposition.py`* | Trend/seasonal-strength figures behind Ch4 §4.11 (reads the STL decomposition already embedded in `thesis_dashboard_Final.html`) |
 
-\* Authored for this repo — no standalone script for this existed on disk. First attempt independently re-ran STL on the raw daily series, but produced different numbers (trend strength ~0.46-0.51, seasonal ~0.30-0.38) than the cited figures — the exact STL hyperparameters (seasonal/trend smoother window lengths, robustness, etc.) used to build the dashboard weren't independently documented anywhere, so an independent re-fit couldn't be trusted to match. Fixed by having the script read the `trend`/`seasonal`/`residual` arrays that `thesis_dashboard_Final.html` already embeds (the same data its "Seasonal decomposition" tab charts) and compute the strength formula directly from those, in Python instead of JS. This reproduces the cited numbers exactly (trend strength 0.256/0.256/0.259, seasonal strength 0.116/0.039/0.04 for Cost/Margin/Sales) since it's using the literal source data rather than a re-derivation. Confirmed by running it — verified, not a re-guess. No `ILE_Modified.xlsx` or `statsmodels` needed for this script anymore; it only reads `final_dashboard/thesis_dashboard_Final.html` (one directory up).
+
 
 ### Supplementary clustering
 
